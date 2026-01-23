@@ -7,17 +7,17 @@ Learn basic Linux commands and understand core networking checks used in technic
 
 ## Linux Commands Practiced
 
-pwd
-ls
-mkdir
-cd
-touch
-echo
-cat
-df -h
-free -h
-ip a
-ping
+### pwd
+### ls
+### mkdir
+### cd
+### touch
+### echo
+### cat
+### df -h
+### free -h
+### ip a
+### ping
 
 
 
