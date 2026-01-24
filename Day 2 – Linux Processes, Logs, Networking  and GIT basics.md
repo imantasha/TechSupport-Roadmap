@@ -8,13 +8,13 @@ Learn real-world Linux process management, system log analysis, networking troub
 ## Part 1 – Linux Process Management
 
 ## Commands Practiced
-ps
-ps aux
-top
-htop
-kill <PID>
-kill -9 <PID>
-sleep 300 &
+### ps
+### ps aux
+### top
+### htop
+### kill <PID>
+### kill -9 <PID>
+### sleep 300 &
 
 ---
 
@@ -288,10 +288,10 @@ Conclusion: Network connectivity and DNS resolution were working correctly.
 ## Part 3 – Git Basics
 
 ### Git Commands Used
-git status
-git add day2.md
-git commit -m "Day 2: Linux processes, logs, networking troubleshooting"
-git push
+### git status
+### git add day2.md
+### git commit -m "Day 2: Linux processes, logs, networking troubleshooting"
+### git push
 
 ### Key Learnings
 
