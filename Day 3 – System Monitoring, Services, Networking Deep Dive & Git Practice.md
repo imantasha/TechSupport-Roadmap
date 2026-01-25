@@ -40,24 +40,24 @@ tcp            LISTEN          0               4096                         127.
 
 ### Key Learnings
 
-#### LISTEN means service is active
+Key Learnings
+- LISTEN state means a service is actively accepting connections
+- Port 22 → SSH service
+- Port 8080 → Application/web server
+- ss is faster and preferred over netstat on modern Linux
 
-- Port 22 → SSH
-
-- Port 8080 → Web server
-
-- ss is the modern replacement for netstat
+---   
 
 ### Part 2 – Service Management (systemctl)
 Commands Practiced
 
-### systemctl status ssh
+- systemctl status ssh
 
-### sudo systemctl start ssh
+- sudo systemctl start ssh
 
-### sudo systemctl stop ssh
+- sudo systemctl stop ssh
 
-### sudo systemctl restart ssh
+- sudo systemctl restart ssh
 
 ### Example Output
 ###  sudo systemctl start ssh
@@ -83,9 +83,12 @@ Jan 25 10:46:18 MantashaIdrisi systemd[1]: Started ssh.service - OpenBSD Secure 
 
 ## Key Learnings
 
-### Services must be running to accept connections
+- Services must be running to accept connections
 
-### Restarting services fixes many production issues
+- Restarting services fixes many production issues
+
+
+--- 
 
 ## Part 3 – System Monitoring
 - Commands Practiced
@@ -175,14 +178,11 @@ After fixing the package state, installation worked normally.
 
 ## Summary
 
-On Day 3, I learned:
+This day strengthened my foundation for L1/L2 Technical Support and Cloud Support roles by giving me hands-on experience with:
 
-How to check open ports and running services
+- Linux service management
+- System performance monitoring
+- Network troubleshooting methodology
+- Real-world package management issues
+- Git-based workflow
 
-How to start and troubleshoot Linux services
-
-How to monitor CPU, memory, disk, and system load
-
-How to diagnose network problems step-by-step
-
-How to use Git CLI to manage and push changes
