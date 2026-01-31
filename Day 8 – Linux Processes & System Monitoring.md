@@ -1,47 +1,47 @@
-Day 8 – Linux Processes & System Monitoring (Technical Support Engineering)
+# Day 8 – Linux Processes & System Monitoring (Technical Support Engineering)
 
-Welcome to Day 8 of  Linux learning journey!
-Today we dive into one of the most critical concepts for real-world troubleshooting:
-process management and monitoring system performance.
+- Welcome to Day 8 of  Linux learning journey!
+- Today we dive into one of the most critical concepts for real-world troubleshooting:
+- process management and monitoring system performance.
 
- What we Will Learn
+ ## What we Will Learn
 
-What Linux processes are
+## What Linux processes are
 
-Checking running processes
+## Checking running processes
 
-Understanding system metrics (CPU, RAM, load average)
+## Understanding system metrics (CPU, RAM, load average)
 
-Foreground vs background jobs
+## Foreground vs background jobs
 
-Killing processes
+- Killing processes
 
-Using ps, top, htop, kill, free, df, du
+- Using ps, top, htop, kill, free, df, du
 
-Troubleshooting common high-CPU or memory issues
+## Troubleshooting common high-CPU or memory issues
 
- What is a Process?
+ ### What is a Process?
 
-A process is any running program in Linux.
+- A process is any running program in Linux.
 
-Each process has:
+### Each process has:
 
-PID → Process ID
+- PID → Process ID
 
-PPID → Parent Process ID
+- PPID → Parent Process ID
 
-USER → Who started it
+- USER → Who started it
 
-STAT → Process state
+- STAT → Process state
 
-COMMAND → Program being executed
+- COMMAND → Program being executed
 
- Viewing Running Processes
- 1. List All Processes
-ps aux
+### Viewing Running Processes
+ - List All Processes
+- ps aux
 
 
-Example Output:
+- Example Output:
 
  ps aux
 USER         PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
@@ -72,13 +72,15 @@ mantasha     547  0.0  0.0  21160  3520 ?        S    07:52   0:00 (sd-pam)
 mantasha     570  0.0  0.1   6072  4736 pts/1    S+   07:52   0:00 -bash
 mantasha    1051 40.0  0.1   8280  4096 pts/0    R+   08:27   0:00 ps aux
 
- 2. Tree View of Processes
+---
 
-Shows the parent-child hierarchy:
+## Tree View of Processes
 
-ps -ef --forest
+- Shows the parent-child hierarchy:
 
-output :
+- ps -ef --forest
+
+- output :
 ps -ef --forest
 UID          PID    PPID  C STIME TTY          TIME CMD
 root           1       0  0 07:52 ?        00:00:01 /sbin/init
@@ -149,83 +151,83 @@ MiB Swap:   1024.0 total,   1024.0 free,      0.0 used.   3397.9 avail Mem
    1061 mantasha  20   0    9292   5504   3328 R   0.0   0.1   0:00.02 top
 
 
-Displays:
+#### Displays:
 
-CPU usage
+- CPU usage
 
-Memory usage
+- Memory usage
 
-Load average
+- Load average
 
-Running processes
+- Running processes
 
- htop – Colorful, Interactive Monitor
+-  htop – Colorful, Interactive Monitor
 
-Install:
+- Install:
 
-sudo apt install htop
-
-
-Run:
-
-htop
+- sudo apt install htop
 
 
-Features:
+- Run:
 
-Scrollable
+- htop
 
-Searchable
 
-Easy process killing
+- Features:
 
- Foreground & Background Jobs
- Run a program in background:
-./script.sh &
+- Scrollable
 
- List background jobs:
-jobs
+- Searchable
 
- Bring job to foreground:
-fg %1
+- Easy process killing
 
- Send job to background:
+#### Foreground & Background Jobs
+ - Run a program in background:
+- ./script.sh &
 
-Press:
+ #### List background jobs:
+- jobs
+
+ - Bring job to foreground:
+- fg %1
+
+- Send job to background:
+
+- Press:
 
 Ctrl + Z
 
 
-Then:
+- Then:
 
 bg
 
- Killing or Stopping Processes
-Kill process by PID:
-kill 1234
+####  Killing or Stopping Processes
+- Kill process by PID:
+- kill 1234
 
-Force kill:
-kill -9 1234
+- Force kill:
+- kill -9 1234
 
-Kill by name:
-pkill firefox
+- Kill by name:
+- pkill firefox
 
-Kill all processes with same name:
-killall python
+- Kill all processes with same name:
+ - killall python
 
- Checking System Resources
- Memory Usage:
-free -h
+ #### Checking System Resources
+ - Memory Usage:
+- free -h
 
- Disk Space:
-df -h
+-  Disk Space:
+- df -h
 
- Folder Size:
+ - Folder Size:
 du -sh /var/log
 
- CPU Info:
-lscpu
-output:
+ ### CPU Info:
+#### lscpu
+- output:
 lscpu
 Architecture:             x86_64
   CPU op-mode(s):         32-bit, 64-bit
